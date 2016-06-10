@@ -1,7 +1,217 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <link rel="stylesheet" href="pname.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<div class="col-md-10">
+<canvas id="penguinName" width="578" height="200">
+</canvas><br />
+<button id="showName">
+  Show name
+</button>
+<button id="showImage">
+  Show image
+</button>
+<a id="img-download" download="penguin-name.png">
+  <button id="post">
+    Download
+  </button>
+</a>
+<button id="clear">
+  Clear
+</button>
+</div>
+<div class="col-md-12" style="display: inline;">
+  <!--<h3>
+First p-p-p-pick your penguin
+</h3>
+  <input type="image" src="http://static.independent.co.uk/s3fs-public/styles/story_medium/public/thumbnails/image/2014/03/18/19/pg-31-penguins-1-rex.jpg" width="90" height="90" name="Emperor" value="http://static.independent.co.uk/s3fs-public/styles/story_medium/public/thumbnails/image/2014/03/18/19/pg-31-penguins-1-rex.jpg"
+  id="img1" class="penImage">
+  <input type="image" src="http://www.jnb-birds.com/Antarctica/2006-12-26/AdeliePenguin_F.jpg" width="90" height="90" name="Adelie" value="http://www.jnb-birds.com/Antarctica/2006-12-26/AdeliePenguin_F.jpg" id="img1" class="penImage">
+  <input type="image" src="https://gifts.worldwildlife.org/gift-center/Images/large-species-photo/large-Rockhopper-Penguin-photo.jpg" width="90" height="90" name="Rockhopper" value="https://gifts.worldwildlife.org/gift-center/Images/large-species-photo/large-Rockhopper-Penguin-photo.jpg"
+  id="img1" class="penImage">
+  <input type="image" src="http://www-tc.pbs.org/wnet/nature/files/2015/01/Gentoo_Penguin_on_Saunders_Island_5551665205.jpg" width="90" height="90" name="Gentoo" value="http://www-tc.pbs.org/wnet/nature/files/2015/01/Gentoo_Penguin_on_Saunders_Island_5551665205.jpg"
+  id="img1" class="penImage">
+  <input type="image" src="http://assets.worldwildlife.org/photos/1792/images/story_full_width/Chinstrap_(C)_Matt_Goddard.JPG" width="90" height="90" name="Chinstrap" value="http://assets.worldwildlife.org/photos/1792/images/story_full_width/Chinstrap_(C)_Matt_Goddard.JPG"
+  id="img1" class="penImage">-->
+  <h3>Select a prestigious title</h3>
+  <select id="title">
+    <option value="" name="title">Title</option>
+    <option value="Baron" name="baron">Baron</option>
+    <option value="Colonel">Colonel</option>
+    <option value="Duchess">Duchess</option>
+    <option value="Viscount">Viscount</option>
+    <option value="Marquesa">Marquesa</option>
+    <option value="Queen">Queen</option>
+    <option value="Sir">Sir</option>
+    <option value="Dame">Dame</option>
+  </select>
+  <h3>Then select your first initial</h3>
+  <div id="firstName" value="no">
+
+    <form id="fName" value="no">
+
+      <ul>
+        <li>
+          <input type="radio" name="fn" value="Pecky"> A</li>
+        <li>
+          <input type="radio" name="fn" value="Chubbers"> B</li>
+        <li>
+          <input type="radio" name="fn" value="Beaky"> C</li>
+        <li>
+          <input type="radio" name="fn" value="Fishbreath"> D</li>
+          </ul>
+
+          <ul>
+        <li>
+          <input type="radio" name="fn" value="Fuzzbutt"> E</li>
+        <li>
+          <input type="radio" name="fn" value="Bigbeak"> F</li>
+        <li>
+          <input type="radio" name="fn" value="Pebbles"> G</li>
+        <li>
+          <input type="radio" name="fn" value="Fishcakes"> H</li>
+          </ul>
+
+      <ul>
+
+        <li>
+          <input type="radio" name="fn" value="Tumtums"> I</li>
+        <li>
+          <input type="radio" name="fn" value="Shrimpy"> J</li>
+        <li>
+          <input type="radio" name="fn" value="Featherface"> K</li>
+        <li>
+          <input type="radio" name="fn" value="Honkers"> L</li>
+      </ul>
+      <ul>
+        <li>
+          <input type="radio" name="fn" value="Blubbers"> M</li>
+        <li>
+          <input type="radio" name="fn" value="Squawky"> N</li>
+        <li>
+          <input type="radio" name="fn" value="Waddles"> O</li>
+        <li>
+          <input type="radio" name="fn" value="Puddles"> P</li>
+      </ul>
+      <ul>
+
+        <li>
+          <input type="radio" name="fn" value="Squidhead"> Q</li>
+        <li>
+          <input type="radio" name="fn" value="Flippers"> R</li>
+        <li>
+          <input type="radio" name="fn" value="Fishface"> S</li>
+        <li>
+          <input type="radio" name="fn" value="Squeaks"> T</li>
+      </ul>
+      <ul>
+        <li>
+          <input type="radio" name="fn" value="Hoppy"> U</li>
+        <li>
+          <input type="radio" name="fn" value="Wobbles"> V</li>
+        <li>
+          <input type="radio" name="fn" value="Flappity"> W</li>
+        <li>
+          <input type="radio" name="fn" value="Chinstrap"> X</li>
+      </ul>
+      <ul>
+        <li>
+          <input type="radio" name="fn" value="Feathers"> Y</li>
+        <li>
+          <input type="radio" name="fn" value="Stubby"> Z</li>
+      </ul>
+    </form>
+  </div>
+  <div id="midName" value="no">
+    <h3>Select your middle initial</h3>
+    <form id="mName" value="no">
+      <ul>
+        <li>
+          <input type="radio" name="mn" value="Mc"> A-M</li>
+        <li>
+          <input type="radio" name="mn" value="Von"> N-Z</li>
+      </ul>
+    </form>
+  </div>
+  <div id="midName" value="no">
+    <h3>Finally, the initial of your last name</h3>
+    <form id="mName" value="no">
+      <ul>
+        <li>
+          <input type="radio" name="sn" value="Flapperson"> A</li>
+        <li>
+          <input type="radio" name="sn" value="Waddlebottom"> B</li>
+        <li>
+          <input type="radio" name="sn" value="Flapdoodle"> C</li>
+        <li>
+          <input type="radio" name="sn" value="Hoppington"> D</li>
+          </ul>
+
+          <ul>
+        <li>
+          <input type="radio" name="sn" value="Beakerson"> E</li>
+        <li>
+          <input type="radio" name="sn" value="Squeakybeak"> F</li>
+        <li>
+          <input type="radio" name="sn" value="Krillington"> G</li>
+        <li>
+          <input type="radio" name="sn" value="Featherbottom"> H</li>
+          </ul>
+
+      <ul>
+
+        <li>
+          <input type="radio" name="sn" value="Beady-eyes"> I</li>
+        <li>
+          <input type="radio" name="sn" value="Roly-poly"> J</li>
+        <li>
+          <input type="radio" name="sn" value="Bellyflop"> K</li>
+        <li>
+          <input type="radio" name="sn" value="Peckington"> L</li>
+      </ul>
+      <ul>
+        <li>
+          <input type="radio" name="sn" value="Pecks-a-lot"> M</li>
+        <li>
+          <input type="radio" name="sn" value="Squidbreath"> N</li>
+        <li>
+          <input type="radio" name="sn" value="Squawksalot"> O</li>
+        <li>
+          <input type="radio" name="sn" value="Fancyflippers"> P</li>
+      </ul>
+      <ul>
+
+        <li>
+          <input type="radio" name="sn" value="Hopsalot"> Q</li>
+        <li>
+          <input type="radio" name="sn" value="Flappyfeet"> R</li>
+        <li>
+          <input type="radio" name="sn" value="Blubberbuns"> S</li>
+        <li>
+          <input type="radio" name="sn" value="Pebblepincher"> T</li>
+      </ul>
+      <ul>
+        <li>
+          <input type="radio" name="sn" value="Wigglefeet"> U</li>
+        <li>
+          <input type="radio" name="sn" value="Flapperson"> V</li>
+        <li>
+          <input type="radio" name="sn" value="Snowballs"> W</li>
+        <li>
+          <input type="radio" name="sn" value="Swimmington"> X</li>
+      </ul>
+      <ul>
+        <li>
+          <input type="radio" name="sn" value="Flipperstein"> Y</li>
+        <li>
+          <input type="radio" name="sn" value="Slip'n'slide"> Z</li>
+      </ul>
+    </form>
+  </div>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
